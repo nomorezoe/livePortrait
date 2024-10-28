@@ -461,7 +461,7 @@ class LP_Engine:
 
         if 0 < eyebrow:
             x_d_new[0, 1, 1] += eyebrow * 0.001
-            x_d_new[0, 2, 1] += eyebrow * -0.001
+           # x_d_new[0, 2, 1] += eyebrow * -0.001
         else:
             x_d_new[0, 1, 0] += eyebrow * -0.001
             x_d_new[0, 2, 0] += eyebrow * 0.001
