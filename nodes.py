@@ -448,25 +448,25 @@ class LP_Engine:
             x_d_new[0, 15, 0] += pupil_x * 0.0007
 
         x_d_new[0, 11, 1] += pupil_y * -0.001
-       # x_d_new[0, 15, 1] += pupil_y * -0.001
+        x_d_new[0, 15, 1] += pupil_y * -0.001
         eyes -= pupil_y / 2.
 
         x_d_new[0, 11, 1] += eyes * -0.001
         x_d_new[0, 13, 1] += eyes * 0.0003
-       # x_d_new[0, 15, 1] += eyes * -0.001
-        #x_d_new[0, 16, 1] += eyes * 0.0003
+        x_d_new[0, 15, 1] += eyes * -0.001
+        x_d_new[0, 16, 1] += eyes * 0.0003
         x_d_new[0, 1, 1] += eyes * -0.00025
-        #x_d_new[0, 2, 1] += eyes * 0.00025
+        x_d_new[0, 2, 1] += eyes * 0.00025
 
 
         if 0 < eyebrow:
             x_d_new[0, 1, 1] += eyebrow * 0.001
-            x_d_new[0, 2, 1] += eyebrow * -0.001
+            #x_d_new[0, 2, 1] += eyebrow * -0.001
         else:
             x_d_new[0, 1, 0] += eyebrow * -0.001
-            x_d_new[0, 2, 0] += eyebrow * 0.001
+            #x_d_new[0, 2, 0] += eyebrow * 0.001
             x_d_new[0, 1, 1] += eyebrow * 0.0003
-            x_d_new[0, 2, 1] += eyebrow * -0.0003
+            #x_d_new[0, 2, 1] += eyebrow * -0.0003
 
 
         return torch.Tensor([rotate_pitch, rotate_yaw, rotate_roll])
@@ -848,10 +848,10 @@ class ExpressionEditor:
                 "rotate_roll": ("FLOAT", {"default": 0, "min": -20, "max": 20, "step": 0.5, "display": display}),
 
                 "blink": ("FLOAT", {"default": 0, "min": -20, "max": 5, "step": 0.5, "display": display}),
-                "eyebrow": ("FLOAT", {"default": 0, "min": -10, "max": 15, "step": 0.5, "display": display}),
+                "eyebrow": ("FLOAT", {"default": 0, "min": -50, "max": 50, "step": 0.5, "display": display}),
                 "wink": ("FLOAT", {"default": 0, "min": 0, "max": 25, "step": 0.5, "display": display}),
-                "pupil_x": ("FLOAT", {"default": 0, "min": -15, "max": 15, "step": 0.5, "display": display}),
-                "pupil_y": ("FLOAT", {"default": 0, "min": -15, "max": 15, "step": 0.5, "display": display}),
+                "pupil_x": ("FLOAT", {"default": 0, "min": -50, "max": 50, "step": 0.5, "display": display}),
+                "pupil_y": ("FLOAT", {"default": 0, "min": -50, "max": 50, "step": 0.5, "display": display}),
                 "aaa": ("FLOAT", {"default": 0, "min": -30, "max": 120, "step": 1, "display": display}),
                 "eee": ("FLOAT", {"default": 0, "min": -20, "max": 15, "step": 0.2, "display": display}),
                 "woo": ("FLOAT", {"default": 0, "min": -20, "max": 15, "step": 0.2, "display": display}),
