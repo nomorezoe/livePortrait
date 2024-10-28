@@ -448,15 +448,15 @@ class LP_Engine:
             x_d_new[0, 15, 0] += pupil_x * 0.0007
 
         x_d_new[0, 11, 1] += pupil_y * -0.001
-        #x_d_new[0, 15, 1] += pupil_y * -0.001
+       # x_d_new[0, 15, 1] += pupil_y * -0.001
         eyes -= pupil_y / 2.
 
         x_d_new[0, 11, 1] += eyes * -0.001
         x_d_new[0, 13, 1] += eyes * 0.0003
-        #x_d_new[0, 15, 1] += eyes * -0.001
-       # x_d_new[0, 16, 1] += eyes * 0.0003
+       # x_d_new[0, 15, 1] += eyes * -0.001
+        #x_d_new[0, 16, 1] += eyes * 0.0003
         x_d_new[0, 1, 1] += eyes * -0.00025
-        x_d_new[0, 2, 1] += eyes * 0.00025
+        #x_d_new[0, 2, 1] += eyes * 0.00025
 
 
         if 0 < eyebrow:
