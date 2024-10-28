@@ -447,8 +447,8 @@ class LP_Engine:
             x_d_new[0, 11, 0] += pupil_x * 0.001
             x_d_new[0, 15, 0] += pupil_x * 0.0007
 
-        x_d_new[0, 11, 1] += pupil_y * -0.001 * 100
-        x_d_new[0, 15, 1] += pupil_y * -0.001 * 100
+        x_d_new[0, 11, 1] += pupil_y * -0.001
+        x_d_new[0, 15, 1] += pupil_y * -0.001
         eyes -= pupil_y / 2.
 
         x_d_new[0, 11, 1] += eyes * -0.001
@@ -851,7 +851,7 @@ class ExpressionEditor:
                 "eyebrow": ("FLOAT", {"default": 0, "min": -10, "max": 15, "step": 0.5, "display": display}),
                 "wink": ("FLOAT", {"default": 0, "min": 0, "max": 25, "step": 0.5, "display": display}),
                 "pupil_x": ("FLOAT", {"default": 0, "min": -15, "max": 15, "step": 0.5, "display": display}),
-                "pupil_y": ("FLOAT", {"default": 0, "min": -15, "max": 15, "step": 0.5, "display": display}),
+                "pupil_y": ("FLOAT", {"default": 0, "min": -50, "max": 50, "step": 0.5, "display": display}),
                 "aaa": ("FLOAT", {"default": 0, "min": -30, "max": 120, "step": 1, "display": display}),
                 "eee": ("FLOAT", {"default": 0, "min": -20, "max": 15, "step": 0.2, "display": display}),
                 "woo": ("FLOAT", {"default": 0, "min": -20, "max": 15, "step": 0.2, "display": display}),
